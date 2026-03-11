@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+body {
+    @apply bg-neutral-900 text-neutral-300;
+    scroll-behavior: smooth;
+}
+
+.scrollbar-none::-webkit-scrollbar{
+    display: none;
+}
