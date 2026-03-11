@@ -30,7 +30,11 @@ type RootState = {
 function Card({ data, trending, index, media_type }: CardProps) {
   const imageURL = useSelector((state: RootState) => state.movieo.imageURL);
 
-  const mediaType = data.media ?? media_type;
+  const mediaType = data.media_type ?? media_type;
+
+  console.log("imageURL:", imageURL)
+console.log("poster_path:", data.poster_path)
+console.log("full src:", imageURL + data?.poster_path)
 
   return (
     <Link
