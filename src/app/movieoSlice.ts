@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
-export interface BannerItem {  
+interface BannerItem {
   id: number;
   title?: string;
+  name?: string;
   backdrop_path?: string;
   overview?: string;
+  vote_average?: number;
+  popularity?: number;
   [key: string]: unknown;
 }
 

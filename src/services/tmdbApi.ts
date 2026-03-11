@@ -15,6 +15,8 @@ export const tmdbApi = createApi({
         },
     }) as BaseQueryFn<FetchArgs, unknown, FetchBaseQueryError>,
     endpoints: (builder) => ({
-        getMovies: builder.query<unknown, void>({ query: () => "" }),
+        getMovies: builder.query<unknown, void>({
+          query: () => ({ url: "" }),  // ← return object, not string
     }),
+}),
 });

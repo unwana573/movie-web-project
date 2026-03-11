@@ -19,7 +19,7 @@ function ExplorePage(): React.ReactElement {
   const params = useParams<{ explore: string }>()
   const [pageNo, setPageNo] = useState<number>(1)
   const [data, setData] = useState<ExploreItem[]>([])
-  const [totalPageNo, setTotalPageNo] = useState<number>(0)
+  // const [totalPageNo, setTotalPageNo] = useState<number>(0)
 
   const fetchData = async (): Promise<void> => {
     try {
@@ -28,7 +28,7 @@ function ExplorePage(): React.ReactElement {
         { params: { page: pageNo } }
       )
       setData((prev) => [...prev, ...response.data.results])
-      setTotalPageNo(response.data.total_pages)
+      // setTotalPageNo(response.data.total_pages)
     } catch (error) {
       console.error("Error fetching data:", error)
     }
